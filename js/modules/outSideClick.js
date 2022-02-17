@@ -1,25 +1,25 @@
-export default function outSideClick(element, events, callback) {
-    const html = document.documentElement;
-    const outside = 'data-outside';
+export default function outSideClick() {
+  const html = document.documentElement;
+  const outside = "data-outside";
 
-    if (!element.hasAttribute(outside)) {
-      events.forEach((userEvent) => {
-       setTimeout(() => {
+  if (!element.hasAttribute(outside)) {
+    events.forEach((userEvent) => {
+      setTimeout(() => {
         html.addEventListener(userEvent, handleOutSideClick);
-       }, 0); 
-      });
-      
-      element.setAttribute(outside, '');
-    }
+      }, 0);
+    });
 
-    function handleOutSideClick(e) {
-      if (!element.contains(e.target)) {
-        element.removeAttribute(outside);
-        
-        events.forEach((userEvent) => {
-          html.removeEventListener(userEvent, handleOutSideClick);
-        });
-        callback();
-      }
+    element.setAttribute(outside, "");
+  }
+
+  function handleOutSideClick(e) {
+    if (!element.contains(e.target)) {
+      element.removeAttribute(outside);
+
+      events.forEach((userEvent) => {
+        html.removeEventListener(userEvent, handleOutSideClick);
+      });
+      callback();
     }
   }
+}
