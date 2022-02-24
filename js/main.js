@@ -8,6 +8,7 @@ import tabNav from "./modules/tab-nav.js";
 import tooltip from "./modules/tooltip.js";
 import fetchAnimals from "./modules/fetchAnimals.js";
 import fetchBitcoin from "./modules/fetchBitcoin.js";
+import operation from "./modules/operation.js";
 
 scrollSuave();
 dropDownMenu();
@@ -19,3 +20,4 @@ tabNav();
 tooltip();
 fetchAnimals();
 fetchBitcoin();
+operation();
