@@ -185,21 +185,22 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 1.5rem;
 }
 
 .copy p {
-  padding: 20px;
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: 700;
 }
 
 .topo {
-  margin-right: 10px;
-}
-
-.topo a {
-  text-decoration: none;
-  color: #222;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 8px 16px;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 @media (max-width: 700px) {

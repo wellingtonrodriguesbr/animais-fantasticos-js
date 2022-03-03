@@ -1,4 +1,5 @@
 import scrollSuave from "./modules/scroll-suave.js";
+import scrollToTop from "./modules/scroll-top.js";
 import dropDownMenu from "./modules/dropdown-menu.js";
 import menuMobile from "./modules/menu-mobile.js";
 import accordionList from "./modules/accordion-list.js";
@@ -11,6 +12,7 @@ import fetchBitcoin from "./modules/fetchBitcoin.js";
 import operation from "./modules/operation.js";
 
 scrollSuave();
+scrollToTop();
 dropDownMenu();
 menuMobile();
 accordionList();
