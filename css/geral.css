@@ -305,13 +305,13 @@ ul {
 }
 
 [data-anime="scroll"] dt::after {
-  content: "⮯";
+  content: "⌄";
   font-size: 20px;
   margin-left: 10px;
 }
 
 [data-anime="scroll"] dt.ativo::after {
-  content: "⮭";
+  content: "⌃";
   font-size: 20px;
   margin-left: 10px;
 }
