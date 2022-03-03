@@ -219,6 +219,10 @@ ul {
     grid-column: 1;
   }
 
+  .copy {
+    margin-bottom: 0;
+  }
+
   .grid-section {
     grid-template-columns: 100px 1fr;
     grid-gap: 10px;
