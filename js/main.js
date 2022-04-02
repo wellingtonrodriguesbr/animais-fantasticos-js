@@ -8,7 +8,7 @@ import operation from "./modules/operation.js";
 import scrollAnimation from "./modules/scroll-animation.js";
 import ScrollSuave from "./modules/scroll-suave.js";
 import scrollToTop from "./modules/scroll-top.js";
-import tabNav from "./modules/tab-nav.js";
+import TabNav from "./modules/tab-nav.js";
 import tooltip from "./modules/tooltip.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
@@ -17,12 +17,17 @@ scrollSuave.init();
 const accordionList = new Accordion('[data-anime="scroll"] dt');
 accordionList.init();
 
+const tabNav = new TabNav(
+  '[data-tab="menu"] li',
+  '[data-tab="content"] section'
+);
+tabNav.init();
+
 scrollToTop();
 dropDownMenu();
 menuMobile();
 modal();
 scrollAnimation();
-tabNav();
 tooltip();
 fetchAnimals();
 fetchBitcoin();
