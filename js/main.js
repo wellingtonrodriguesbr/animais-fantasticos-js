@@ -1,17 +1,18 @@
-import scrollSuave from "./modules/scroll-suave.js";
-import scrollToTop from "./modules/scroll-top.js";
-import dropDownMenu from "./modules/dropdown-menu.js";
-import menuMobile from "./modules/menu-mobile.js";
 import accordionList from "./modules/accordion-list.js";
-import modal from "./modules/modal.js";
-import scrollAnimation from "./modules/scroll-animation.js";
-import tabNav from "./modules/tab-nav.js";
-import tooltip from "./modules/tooltip.js";
+import dropDownMenu from "./modules/dropdown-menu.js";
 import fetchAnimals from "./modules/fetchAnimals.js";
 import fetchBitcoin from "./modules/fetchBitcoin.js";
+import menuMobile from "./modules/menu-mobile.js";
+import modal from "./modules/modal.js";
 import operation from "./modules/operation.js";
+import scrollAnimation from "./modules/scroll-animation.js";
+import ScrollSuave from "./modules/scroll-suave.js";
+import scrollToTop from "./modules/scroll-top.js";
+import tabNav from "./modules/tab-nav.js";
+import tooltip from "./modules/tooltip.js";
 
-scrollSuave();
+const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
+scrollSuave.init();
 scrollToTop();
 dropDownMenu();
 menuMobile();
