@@ -1,4 +1,4 @@
-import accordionList from "./modules/accordion-list.js";
+import Accordion from "./modules/accordion-list.js";
 import dropDownMenu from "./modules/dropdown-menu.js";
 import fetchAnimals from "./modules/fetchAnimals.js";
 import fetchBitcoin from "./modules/fetchBitcoin.js";
@@ -13,10 +13,13 @@ import tooltip from "./modules/tooltip.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
+
+const accordionList = new Accordion('[data-anime="scroll"] dt');
+accordionList.init();
+
 scrollToTop();
 dropDownMenu();
 menuMobile();
-accordionList();
 modal();
 scrollAnimation();
 tabNav();
