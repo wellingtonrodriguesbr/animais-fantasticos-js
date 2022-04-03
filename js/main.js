@@ -3,7 +3,7 @@ import dropDownMenu from "./modules/dropdown-menu.js";
 import fetchAnimals from "./modules/fetchAnimals.js";
 import fetchBitcoin from "./modules/fetchBitcoin.js";
 import menuMobile from "./modules/menu-mobile.js";
-import modal from "./modules/modal.js";
+import Modal from "./modules/modal.js";
 import operation from "./modules/operation.js";
 import scrollAnimation from "./modules/scroll-animation.js";
 import ScrollSuave from "./modules/scroll-suave.js";
@@ -23,10 +23,20 @@ const tabNav = new TabNav(
 );
 tabNav.init();
 
+const modal = new Modal(
+  '[data-modal="abrir"]',
+  '[data-modal="fechar"]',
+  '[data-modal="container"]'
+);
+modal.init();
+
+setTimeout(() => {
+  modal.toggleModal();
+}, 5000);
+
 scrollToTop();
 dropDownMenu();
 menuMobile();
-modal();
 scrollAnimation();
 tooltip();
 fetchAnimals();
