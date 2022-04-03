@@ -9,7 +9,7 @@ import scrollAnimation from "./modules/scroll-animation.js";
 import ScrollSuave from "./modules/scroll-suave.js";
 import scrollToTop from "./modules/scroll-top.js";
 import TabNav from "./modules/tab-nav.js";
-import tooltip from "./modules/tooltip.js";
+import Tooltip from "./modules/tooltip.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -34,11 +34,13 @@ setTimeout(() => {
   modal.toggleModal();
 }, 5000);
 
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
+
 scrollToTop();
 dropDownMenu();
 menuMobile();
 scrollAnimation();
-tooltip();
 fetchAnimals();
 fetchBitcoin();
 operation();
