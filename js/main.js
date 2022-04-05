@@ -5,7 +5,7 @@ import fetchBitcoin from "./modules/fetchBitcoin.js";
 import menuMobile from "./modules/menu-mobile.js";
 import Modal from "./modules/modal.js";
 import operation from "./modules/operation.js";
-import scrollAnimation from "./modules/scroll-animation.js";
+import ScrollAnimation from "./modules/scroll-animation.js";
 import ScrollSuave from "./modules/scroll-suave.js";
 import scrollToTop from "./modules/scroll-top.js";
 import TabNav from "./modules/tab-nav.js";
@@ -37,10 +37,12 @@ setTimeout(() => {
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
+const scrollAnimation = new ScrollAnimation('[data-anime="scroll"]');
+scrollAnimation.init();
+
 scrollToTop();
 dropDownMenu();
 menuMobile();
-scrollAnimation();
 fetchAnimals();
 fetchBitcoin();
 operation();
