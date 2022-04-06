@@ -22,10 +22,11 @@ export default class DropDownMenu {
 
   activeDropDownMenu(event) {
     event.preventDefault();
-    event.currentTarget.classList.add(this.activeClass);
+    const element = event.currentTarget;
+    element.classList.add(this.activeClass);
 
-    outSideClick(event.currentTarget, this.events, () => {
-      this.classList.remove(this.activeClass);
+    outSideClick(element, this.events, () => {
+      element.classList.remove(this.activeClass);
     });
   }
 
