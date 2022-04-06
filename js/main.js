@@ -1,5 +1,5 @@
 import Accordion from "./modules/accordion-list.js";
-import dropDownMenu from "./modules/dropdown-menu.js";
+import DropDownMenu from "./modules/dropdown-menu.js";
 import fetchAnimals from "./modules/fetchAnimals.js";
 import fetchBitcoin from "./modules/fetchBitcoin.js";
 import menuMobile from "./modules/menu-mobile.js";
@@ -40,8 +40,10 @@ tooltip.init();
 const scrollAnimation = new ScrollAnimation('[data-anime="scroll"]');
 scrollAnimation.init();
 
+const dropDownMenu = new DropDownMenu("[data-dropdown]");
+dropDownMenu.init();
+
 scrollToTop();
-dropDownMenu();
 menuMobile();
 fetchAnimals();
 fetchBitcoin();
