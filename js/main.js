@@ -4,7 +4,7 @@ import fetchAnimals from "./modules/fetchAnimals.js";
 import fetchBitcoin from "./modules/fetchBitcoin.js";
 import MenuMobile from "./modules/menu-mobile.js";
 import Modal from "./modules/modal.js";
-import operation from "./modules/operation.js";
+import Operation from "./modules/operation.js";
 import ScrollAnimation from "./modules/scroll-animation.js";
 import ScrollSuave from "./modules/scroll-suave.js";
 import scrollToTop from "./modules/scroll-top.js";
@@ -46,7 +46,9 @@ dropDownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="list"]', '[data-menu="button"]');
 menuMobile.init();
 
+const operation = new Operation("[data-semana]");
+operation.init();
+
 scrollToTop();
 fetchAnimals();
 fetchBitcoin();
-operation();

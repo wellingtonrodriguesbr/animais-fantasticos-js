@@ -1,16 +1,40 @@
-export default function operation() {
-  const operation = document.querySelector("[data-semana]");
-  const days = operation.dataset.semana.split(",").map(Number);
-  const hours = operation.dataset.horario.split(",").map(Number);
+export default class Operation {
+  constructor(operation) {
+    this.operation = document.querySelector(operation);
+    this.activeClass = "open";
+  }
 
-  const dateNow = new Date();
-  const day = dateNow.getDay();
-  const hour = dateNow.getHours();
+  dataOperation() {
+    this.days = this.operation.dataset.semana.split(",").map(Number);
+    this.hours = this.operation.dataset.horario.split(",").map(Number);
+  }
 
-  const open = days.indexOf(day) !== -1;
-  const openHour = hour >= hours[0] && hour < hours[1];
+  dataNow() {
+    this.dateNow = new Date();
+    this.day = this.dateNow.getDay();
+    this.hour = this.dateNow.getUTCHours() - 3;
+  }
 
-  if (open && openHour) {
-    operation.classList.add("open");
+  open() {
+    const openWeek = this.days.indexOf(this.day) !== -1;
+    const openHour = this.hour >= this.hours[0] && this.hour < this.hours[1];
+
+    return openWeek && openHour;
+  }
+
+  openActive() {
+    if (this.open()) {
+      this.operation.classList.add(this.activeClass);
+    }
+  }
+
+  init() {
+    if (this.operation) {
+      this.dataOperation();
+      this.dataNow();
+      this.openActive();
+    }
+
+    return this;
   }
 }
