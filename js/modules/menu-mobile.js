@@ -15,10 +15,14 @@ export default class MenuMobile {
     }
   }
 
-  openMenu() {
+  openMenu(event) {
+    event.preventDefault();
+    this.menuList.classList.add(this.activeClass);
+    this.menuButton.classList.add(this.activeClass);
+
     outSideClick(this.menuList, this.events, () => {
-      this.menuList.classList.toggle(this.activeClass);
-      this.menuButton.classList.toggle(this.activeClass);
+      this.menuList.classList.remove(this.activeClass);
+      this.menuButton.classList.remove(this.activeClass);
     });
   }
 
