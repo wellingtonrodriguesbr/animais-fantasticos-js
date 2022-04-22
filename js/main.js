@@ -10,6 +10,7 @@ import ScrollSuave from "./modules/scroll-suave.js";
 import scrollToTop from "./modules/scroll-top.js";
 import TabNav from "./modules/tab-nav.js";
 import Tooltip from "./modules/tooltip.js";
+import { SlideNav } from "./modules/slide.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -52,3 +53,7 @@ operation.init();
 scrollToTop();
 fetchAnimals();
 fetchBitcoin();
+
+const slide = new SlideNav(".slide", ".wrapper");
+slide.init();
+slide.addControlEvent(".customControl");
